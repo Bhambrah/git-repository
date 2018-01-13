@@ -34,8 +34,7 @@ def array_left_rotation(a, n, k):
         j = (i-k)%n
         f[j] = a[i]
     return(f)    
-
-n, k = map(int, input("Enter space separated values for size of array and number of left rotations to be performed: ").strip().split(' '))
-a = list(map(int, input("Enter space separated values for array elements: ").strip().split(' ')))
+n, k = map(int, input().strip().split(' '))
+a = list(map(int, input().strip().split(' ')))
 answer = array_left_rotation(a, n, k);
-print("Final array after {} left rotations \n on {} \n is {}.".format(k,a,answer))
+print(*answer, sep=' ')
